@@ -6,6 +6,11 @@
  * Author: Adrian, Dennis y David
  */
 
-// Aquí debajo va el código que hace funcionar al plugin
-echo "<h1>¡Hola! Este es mi archivo PHP de TareaLarga</h1>";
+// 1. Creamos una función propia con el mensaje que tú quieres
+function mostrar_mensaje_tarea_larga() {
+    echo "<h1 style='text-align: center; color: red; padding: 20px;'>¡Hola! Este es mi archivo PHP de TareaLarga</h1>";
+}
+
+// 2. Enganchamos nuestra función al pie de la página de WordPress
+add_action('wp_footer', 'mostrar_mensaje_tarea_larga');
 ?>
