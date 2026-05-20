@@ -6,11 +6,13 @@
  * Author: Adrian, Dennis y David
  */
 
-// 1. Creamos una función propia con el mensaje que tú quieres
-function mostrar_mensaje_tarea_larga() {
-    echo "<h1 style='text-align: center; color: red; padding: 20px;'>¡Hola! Este es mi archivo PHP de TareaLarga</h1>";
+// Esta función obliga a inyectar el código HTML directamente en la cabecera de la página
+function pintar_cabecera_tarea() {
+    echo "<div style='background: red; color: white; text-align: center; padding: 30px; font-size: 24px; font-weight: bold; width: 100%; position: relative; z-index: 99999;'>";
+    echo "<h1>¡Hola! Este es mi archivo PHP de TareaLarga</h1>";
+    echo "</div>";
 }
 
-// 2. Enganchamos nuestra función al pie de la página de WordPress
-add_action('wp_footer', 'mostrar_mensaje_tarea_larga');
+// Lo enganchamos en el "wp_head" que es sagrado para todas las páginas de WordPress
+add_action('wp_head', 'pintar_cabecera_tarea');
 ?>
