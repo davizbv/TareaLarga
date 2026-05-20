@@ -8,7 +8,7 @@
 
 // Esta función obliga a inyectar el código HTML directamente en la cabecera de la página
 function pintar_cabecera_tarea() {
-    echo "<div style='background: orange; color: white; text-align: center; padding: 30px; font-size: 24px; font-weight: bold; width: 100%; position: relative; z-index: 99999;'>";
+    echo "<div style='background: yellow; color: white; text-align: center; padding: 30px; font-size: 24px; font-weight: bold; width: 100%; position: relative; z-index: 99999;'>";
     echo "<h1>¡Hola! Este es mi archivo PHP de TareaLarga</h1>";
     echo "</div>";
 }
